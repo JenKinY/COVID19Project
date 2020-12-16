@@ -1,0 +1,68 @@
+{
+  "ret": 0,
+  "info": "",
+  "data": {
+    "statisGradeCityDetail": [
+      {
+        "nowConfirm": 8,
+        "confirm": 33,
+        "dead": 0,
+        "heal": 25,
+        "date": "12/14",
+        "sdate": "12/14",
+        "province": "黑龙江",
+        "city": "牡丹江",
+        "confirmAdd": 2,
+        "grade": "部分中风险"
+      },
+      {
+        "heal": 142,
+        "grade": "部分中风险",
+        "sdate": "12/12",
+        "city": "成都",
+        "nowConfirm": 11,
+        "confirmAdd": 0,
+        "date": "12/13",
+        "province": "四川",
+        "confirm": 156,
+        "dead": 3
+      },
+      {
+        "city": "呼伦贝尔",
+        "confirmAdd": 0,
+        "heal": 14,
+        "province": "内蒙古",
+        "nowConfirm": 23,
+        "confirm": 37,
+        "dead": 0,
+        "grade": "部分中风险",
+        "date": "12/12",
+        "sdate": "12/10"
+      },
+      {
+        "grade": "全部低风险",
+        "sdate": "12/06",
+        "heal": 10,
+        "city": "滨海新区",
+        "nowConfirm": 3,
+        "confirmAdd": 0,
+        "confirm": 13,
+        "dead": 0,
+        "date": "12/13",
+        "province": "天津"
+      },
+      {
+        "city": "浦东",
+        "dead": 0,
+        "confirmAdd": 0,
+        "confirm": 68,
+        "heal": 64,
+        "grade": "全部低风险",
+        "date": "12/08",
+        "sdate": "11/24",
+        "province": "上海",
+        "nowConfirm": 4
+      }
+    ]
+  }
+}
