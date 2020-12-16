@@ -48,7 +48,7 @@
         <h1 class="text-white">0x0001. CHINA 国内数据概览</h1>
     </div>
     <div class="content-box  ml-3 mr-3">
-
+        <h5 class="text-center">数据更新时间：{{ china_overview_data['date'] }} (由于腾讯接口原因，此部分概览数据只能实时获取前一天的数据)</h5>
         <div class="row p-3 justify-content-around">
 
             <div class="card col-3">
@@ -218,8 +218,11 @@
                 radius: ['50%', '70%'],
                 avoidLabelOverlap: false,
                 label: {
-                    show: false,
-                    position: 'center'
+                    show:true,
+                    position: 'center',
+                    normal:{
+                        formatter: '{b}  {d}%  ',
+                    }
                 },
                 emphasis: {
                     label: {

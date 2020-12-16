@@ -1,13 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, make_response, send_file
 from util import overview_data, grade_city_data, asymptomatic_province_data
 import requests
 
 app = Flask(__name__)
 
 
-@app.route('/get')
-def get_json_data():
-    return 'get_json_data'
+@app.route('/download_content')
+def download_content():
+    # 发送 content 内容 下载
+    content = "long text"
+    response = make_response(content)
+    response.headers["Content-Disposition"] = "p_w_upload; filename=myfilename.txt"
+    return response
+
+@app.route('/download_file')
+def download_file():
+    # 下载服务器内容
+    response = make_response(send_file("./static/csv_data/"))
+    response.headers["Content-Disposition"] = "p_w_upload; filename=12-16.COVID19-CHINA-OVERVIEW-DATA.csv;"
+    return response
 
 
 @app.route('/')
