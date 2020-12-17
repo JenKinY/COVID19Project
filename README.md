@@ -11,7 +11,7 @@
     ```
 3. 网页进入：http://127.0.0.1:5000/ 
 ## 运行效果
-![COVIDProject-overview_tinypng](https://skyzc-halo.oss-cn-shenzhen.aliyuncs.com/blog-img/COVIDProject-overview_tinypng_1608208770903.jpg?x-oss-process=style/skyzc-halo-img)
+![COVIDProject-overview_tinypng](./static/doc_images/COVIDProject-overview_tinypng.jpg)
 
 
 ## 腾讯COVID19数据 API 分析
