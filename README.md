@@ -1,3 +1,19 @@
+## 如何运行
+(推荐使用 python3-venv 虚拟环境)
+1. 安装 `requirements.txt` 中项目所用的包
+项目根目录下执行：
+    ```shell
+    pip install -r requirements.txt
+    ```
+2. 运行 Flask
+    ```shell
+    python3 -m flask run
+    ```
+3. 网页进入：http://127.0.0.1:5000/ 
+## 运行效果
+![COVIDProject-overview_tinypng](https://skyzc-halo.oss-cn-shenzhen.aliyuncs.com/blog-img/COVIDProject-overview_tinypng_1608208770903.jpg?x-oss-process=style/skyzc-halo-img)
+
+
 ## 腾讯COVID19数据 API 分析
 
 首先是对腾讯COVID数据API的获取分析，载入页面之后可以看到以下接口，Preview 之后可以看到正是我们所需要的数据。各个数据接口分析如下：
