@@ -1,6 +1,6 @@
 from flask import Flask, render_template, make_response, send_file
-from util import overview_data, grade_city_data, asymptomatic_province_data
-import requests
+from util import overview_data, grade_city_data, asymptomatic_province_data,save_json2csv
+import time
 
 app = Flask(__name__)
 
@@ -15,9 +15,14 @@ def download_content():
 
 @app.route('/download_file')
 def download_file():
+
+    # 保存数据到服务器
+    save_json2csv.save_file_server()
+
+    nowdate = time.strftime("%Y-%m-%d_%H:%M:%S", time.localtime())
     # 下载服务器内容
-    response = make_response(send_file("./static/csv_data/"))
-    response.headers["Content-Disposition"] = "p_w_upload; filename=12-16.COVID19-CHINA-OVERVIEW-DATA.csv;"
+    response = make_response(send_file("./static/wait_download_file/china_overview_data.csv"))
+    response.headers["Content-Disposition"] = "p_w_upload; filename="+nowdate+"COVID19-CHINA-OVERVIEW-DATA.csv;"
     return response
 
 

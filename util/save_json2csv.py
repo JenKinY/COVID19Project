@@ -38,7 +38,9 @@ def save_china_day_list():
     # 写入数据
 
 
-def write_data(data):
+def write_data():
+    target_json = cdl_original_json['data']
+    data = target_json
     if data == -1:
         print('no data')
         return
@@ -46,11 +48,12 @@ def write_data(data):
     month = str(time.localtime()[1])
     day = str(time.localtime()[2])
     # 打开文件
-    curPath = '../static/csv_data/'
+    curPath = 'static/wait_download_file/'
     if not os.path.exists(curPath):
         os.mkdir(curPath)
-    print(curPath + month + '-' + day + '.COVID19-CHINA国内概览数据.csv')
-    fp = open(curPath + month + '-' + day + '.COVID19-CHINA国内概览数据.csv', 'w+')
+    # print(curPath + month + '-' + day + '.COVID19-CHINA国内概览数据.csv')
+    print(curPath+'china_overview_data.csv')
+    fp = open(curPath+ 'china_overview_data.csv', 'w+')
     chinaDayList = data['chinaDayList']
     print(chinaDayList[-1])
     fp.write(
@@ -82,7 +85,11 @@ def write_data(data):
         fp.write('\n')
     fp.close()
 
+def save_file_server():
+    write_data()
+    print("保存到服务器成功^_^")
 
-if __name__ == '__main__':
-    # print(save_china_day_list())
-    write_data(data=save_china_day_list())
+#
+# if __name__ == '__main__':
+#     print(save_china_day_list())
+#     write_data(data=save_china_day_list())

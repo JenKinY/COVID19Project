@@ -48,9 +48,8 @@
         <h1 class="text-white">0x0001. CHINA 国内数据概览</h1>
     </div>
     <div class="content-box  ml-3 mr-3">
-        <h5 class="text-center">数据更新时间：{{ china_overview_data['date'] }} (由于腾讯接口原因，此部分概览数据只能实时获取前一天的数据)</h5>
-        <div class="row p-3 justify-content-around">
-
+        <h5 class="text-center text-secondary">UPDATE：{{ china_overview_data['date'] }} <button class="btn btn-secondary" style="height: 35px">下载</button> </h5>
+        <div class="row p-3 pt-1 justify-content-around">
             <div class="card col-3">
                 <div class="card-body">
                     <p class="card-title">{# 现有确诊=累计确诊-累计治愈人数-累计死亡人数                    #}
@@ -58,8 +57,16 @@
                     </p>
                     <p class="text-danger">{{ china_overview_data['confirm'] - china_overview_data['heal'] - china_overview_data['dead'] }}</p>
                     <h5>
-                        较上日 <span
-                            class="text-danger"> +{{ china_add_overview_data['confirm'] - china_add_overview_data['heal'] - china_add_overview_data['dead'] }} </span>
+                        较上日
+                        <span class="text-danger">
+                            {% if china_add_overview_data['confirm'] - china_add_overview_data['heal'] - china_add_overview_data['dead'] > 0 %}
+                                + {{ china_add_overview_data['confirm'] - china_add_overview_data['heal'] - china_add_overview_data['dead'] }}
+
+                            {% else %}
+                                {{ china_add_overview_data['confirm'] - china_add_overview_data['heal'] - china_add_overview_data['dead'] }}
+
+                            {% endif %}
+                        </span>
                     </h5>
                 </div>
             </div>
@@ -218,9 +225,9 @@
                 radius: ['50%', '70%'],
                 avoidLabelOverlap: false,
                 label: {
-                    show:true,
+                    show: true,
                     position: 'center',
-                    normal:{
+                    normal: {
                         formatter: '{b}  {d}%  ',
                     }
                 },

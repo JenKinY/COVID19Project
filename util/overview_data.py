@@ -66,7 +66,7 @@ def get_china_city_statis():
 
 
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 #     # print(get_overview_data())
-#     print(get_china_day_add_list())
+    print(get_china_day_add_list())
 #     print(get_china_city_statis())
